@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from documents.models import Documents
 
-# Create your views here.
+
+class ViewDocuments(ListView):
+    model = Documents
