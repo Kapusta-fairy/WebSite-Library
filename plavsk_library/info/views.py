@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
 
-def register(request):
+def view_info(request):
     return render(request, 'info/info.html')
 

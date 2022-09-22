@@ -1,6 +1,6 @@
 from django.urls import path
-from history.views import ViewHistory
+from info.views import view_info
 
 urlpatterns = [
-    path('', ViewHistory.as_view(), name='info'),
+    path('', view_info, name='info'),
 ]
