@@ -5,14 +5,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('админ/', admin.site.urls),
-    # path('', include('main.urls')),
-    # path('основные-сведения', include('info.urls')),
-    # path('структура-организации', include('structure.urls')),
-    # path('история', include('history.urls')),
-    # path('услуги', include('services.urls')),
-    # path('новости', include('news.urls')),
-    # path('галерея', include('gallery.urls')),
-    # path('документы', include('documents.urls')),
+    path('', include('main.urls')),
+    path('основные-сведения', include('info.urls')),
+    path('структура-организации', include('structure.urls')),
+    path('история', include('history.urls')),
+    path('услуги', include('services.urls')),
+    path('новости', include('news.urls')),
+    path('галерея', include('gallery.urls')),
+    path('документы', include('documents.urls')),
     path('календарь-знаменательных-дат', include('dates.urls'))
 ]
 
