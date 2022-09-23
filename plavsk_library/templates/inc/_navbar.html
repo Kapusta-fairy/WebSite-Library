@@ -1,12 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
     <div class="container-fluid">
-
+        <a class="navbar-brand" href="{% url 'stats' %}">
+            <img src="/media/navbar/kapusta.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            Главная
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Главная</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        О нас
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'info' %}">Основные сведения</a></li>
+                        <li><a class="dropdown-item" href="{% url 'structure' %}">Структура организации</a></li>
+                        <li><a class="dropdown-item" href="{% url 'history' %}">История</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'news' %}">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Галерея</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'documents' %}">Документы</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'dates' %}">Календарь знаменательных дат</a></li>
             </ul>
