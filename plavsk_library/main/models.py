@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class ImageLink(models.Model):
+    image = models.ImageField(upload_to='gallery/', verbose_name='Изображение')
+    url = models.URLField(max_length=500, verbose_name='Ссылка')

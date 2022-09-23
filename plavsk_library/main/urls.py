@@ -1,6 +1,6 @@
 from django.urls import path
-from history.views import ViewHistory
+from main.views import ImageMain
 
 urlpatterns = [
-    path('', ViewHistory.as_view(), name='info'),
+    path('', ImageMain.as_view(), name='main'),
 ]

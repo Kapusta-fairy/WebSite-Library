@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from main.models import ImageLink
 
-# Create your views here.
+
+class ImageMain(ListView):
+    model = ImageLink
