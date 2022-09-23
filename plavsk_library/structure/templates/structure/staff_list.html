@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Календарь знаменательных дат
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="row row-cols-md-3">
+            {% for department in Department %}
+            <div class="col">
+                <div class="card border-dark mb-3 h-100" style="width: 28rem;">
+                    <div class="card-body text-dark">
+                        <h6 class="card-title">{{ item.text }}</h6>
+                    </div>
+                    {% for employee in object_list %}
+                    {% if employee.department == department %}
+                    абоба
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

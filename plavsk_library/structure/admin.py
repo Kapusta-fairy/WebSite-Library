@@ -1,3 +1,5 @@
 from django.contrib import admin
+from structure.models import Department, Staff
 
-# Register your models here.
+admin.site.register(Staff)
+admin.site.register(Department)
