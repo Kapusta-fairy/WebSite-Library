@@ -1,3 +1,6 @@
 from django.contrib import admin
+from history.models import HistoryImageNoCaption, HistoryImageCaption, HistoryTextInfo
 
-# Register your models here.
+admin.site.register(HistoryImageNoCaption)
+admin.site.register(HistoryImageCaption)
+admin.site.register(HistoryTextInfo)
