@@ -1,14 +1,11 @@
 from django.db import models
 
 
-class HistoryImageNoCaption(models.Model):
-    image = models.ImageField(upload_to='gallery/', verbose_name='Изображение')
+class History(models.Model):
+    image = models.ImageField(upload_to='history/', blank=True, null=True, verbose_name='Изображение')
+    caption = models.CharField(max_length=150, blank=True, null=True, verbose_name='Подпись')
+    text = models.TextField(blank=True, null=True, verbose_name='Текст')
 
-
-class HistoryImageCaption(models.Model):
-    image = models.ImageField(upload_to='gallery/', verbose_name='Изображение')
-    caption = models.CharField(max_length=50, verbose_name='Подпись')
-
-
-class HistoryTextInfo(models.Model):
-    text = models.TextField(verbose_name='Текст')
+    class Meta:
+        verbose_name = 'Историческая информация'
+        verbose_name_plural = 'блок информации'

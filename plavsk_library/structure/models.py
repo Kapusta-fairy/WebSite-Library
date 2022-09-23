@@ -10,6 +10,6 @@ class Staff(models.Model):
 
 class Department(models.Model):
     title = models.CharField(max_length=40, verbose_name='Название')
-    phone = models.IntegerField(verbose_name='Телефон')
+    phone = models.CharField(max_length=11, verbose_name='Телефон')
     address = models.CharField(max_length=40, verbose_name='Адрес')
     mode = models.TextField(verbose_name='Режим работы')

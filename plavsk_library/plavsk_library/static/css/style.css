@@ -1,0 +1,9 @@
+.errorlist{
+    color: red;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+}
+.navbar-dark .navbar-brand {
+    color: #000;
+}
