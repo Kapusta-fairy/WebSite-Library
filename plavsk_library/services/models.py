@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class Services(models.Model):
+    text = models.TextField(verbose_name='Услуга')
