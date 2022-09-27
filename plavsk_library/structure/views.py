@@ -1,5 +1,6 @@
 from django.views.generic import ListView
-from structure.models import Staff, Department
+from info.models import Department
+from structure.models import Staff
 
 
 class StaffStructure(ListView):

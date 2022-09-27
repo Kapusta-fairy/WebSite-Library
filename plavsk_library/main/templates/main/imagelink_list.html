@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{{ Title }}
+{{ title }}
 {% endblock %}
 
 {% block content %}
 <div class="row">
-    {{ Content|safe }}
+    {{ content|safe }}
     <img src="media/main.jpg" class="card-img-top" alt="">
     <div class="col-md-9">
-            {% for item in object_list %}
-            <div class="col">
-                <a href="{{ item.url }}">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="">
-                </a>
-            </div>
-            {% endfor %}
+        {% for item in object_list %}
+        <div class="col">
+            <a href="{{ item.url }}">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="">
+            </a>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

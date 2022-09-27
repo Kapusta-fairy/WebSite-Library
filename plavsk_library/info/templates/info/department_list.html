@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-5">
+        <p><h5>Полное наименование учреждения:</h5> {{ full_name }}
+        <p><h5>Сокращенное наименование учреждения:</h5> {{ short_name }}
+        <p><h5>Дата создания организации:</h5> {{ date_creation }} год
+        <p><h5>Руководитель:</h5> {{ leader }}
+        <p><h5>Тип учреждения (организации):</h5> {{ organization_type }}
+        <p><h5>Учредитель:</h5> {{ founder|safe }}
+        <p><h5>Юридический адрес:</h5> {{ legal_address }}
+        <p><h5>Фактический, почтовый адрес:</h5> {{ actual_address }}
+    </div>
+    <div class="col-md-6">
+        {% for department in object_list %}
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <h5 class="card-title">{{ department.title }}</h5>
+            <p>{{ department.schedule }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
