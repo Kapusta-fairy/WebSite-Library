@@ -16,11 +16,15 @@
         <p><h5>Юридический адрес:</h5> {{ legal_address }}
         <p><h5>Фактический, почтовый адрес:</h5> {{ actual_address }}
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
+        <p><h4>Отделения:</h4>
         {% for department in object_list %}
-        <div class="card border-dark mb-3" style="max-width: 18rem;">
-            <h5 class="card-title">{{ department.title }}</h5>
-            <p>{{ department.schedule }}</p>
+        <div class="card mb-3" style="max-width: 18rem;">
+            <div class="department_content">
+                <h5 class="card-title">{{ department.title }}</h5>
+                <p>Телефон: {{ department.phone }}</p>
+                <p>Расписание:<br>{{ department.schedule|safe }}</p>
+            </div>
         </div>
         {% endfor %}
     </div>

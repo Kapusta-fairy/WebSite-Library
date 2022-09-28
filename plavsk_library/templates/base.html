@@ -17,7 +17,7 @@
 
 {% include 'inc/_navbar.html' %}
 
-<div class="container mt-2">
+<div class="content container mt-2">
 
     {% if messages %}
 
@@ -37,21 +37,21 @@
 
     {% endif %}
 
-    {% block content %}
-    CONTENT
-    {% endblock %}
-    <div class="col bottom_bar">
-        <br>
-        <a href="https://ok.ru/plavskayar">
-            <img src="media/navbar/ok_logo.png" alt="" height="50" width="50">
-        </a>
-        <a href="https://vk.com/plavskbiblioteka">
-            <img src="media/navbar/vk_logo.png" alt="" height="50" width="50">
-        </a>
-        <br>
-        МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ ПЛАВСКИЙ РАЙОН
-        "ЦЕНТРАЛИЗОВАННАЯ БИБЛИОТЕЧНАЯ СИСТЕМА" &copy; 2022
-    </div>
+        {% block content %}
+        CONTENT
+        {% endblock %}
+        <div class="col bottom_bar">
+            <br>
+            <a href="https://ok.ru/plavskayar">
+                <img src="media/navbar/ok_logo.png" alt="" height="50" width="50">
+            </a>
+            <a href="https://vk.com/plavskbiblioteka">
+                <img src="media/navbar/vk_logo.png" alt="" height="50" width="50">
+            </a>
+            <br>
+            МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ ПЛАВСКИЙ РАЙОН
+            "ЦЕНТРАЛИЗОВАННАЯ БИБЛИОТЕЧНАЯ СИСТЕМА" &copy; 2022
+        </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

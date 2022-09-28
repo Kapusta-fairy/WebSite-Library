@@ -1,9 +1,3 @@
-.navbar-dark .navbar-nav .nav-link {
-    color: #212529;
-}
-.navbar-dark .navbar-brand {
-    color: #000;
-}
 .lib_title {
     text-align: center;
 }
@@ -11,4 +5,19 @@
     text-align: center;
     color: #666;
     font-size: 16px;
+}
+.department_content {
+    margin: 3%;
+}
+.content {
+    background: #fff;
+}
+body {
+    background: url("../img/back.png");
+}
+.navbar {
+    background-color: #FF9700;
+}
+.navbar .navbar-nav .nav-link {
+    color: #212529;
 }
