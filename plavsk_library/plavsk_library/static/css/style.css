@@ -16,7 +16,7 @@ body {
     background: url("../img/back.png");
 }
 .navbar {
-    background-color: #FF9700;
+    background: rgba(255, 154, 0, 0.93);
 }
 .navbar .navbar-nav .nav-link {
     color: #212529;
