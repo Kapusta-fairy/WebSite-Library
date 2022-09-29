@@ -1,28 +1,32 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Календарь знаменательных дат
+Структура Организации
 {% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-12">
+        {% for department in departments %}
         <div class="row row-cols-md-3">
-            {% for department in Department %}
             <div class="col">
-                <div class="card border-dark mb-3 h-100" style="width: 28rem;">
-                    <div class="card-body text-dark">
-                        <h6 class="card-title">{{ item.text }}</h6>
+                <h4>{{ department.title }}</h4>
+                <div class="card-group">
+                    {% for item in object_list %}
+                    <div class="card">
+                        {% if item.department == department %}
+                        <div class="card-body text-dark">
+                            <img src="{{ item.photo.url }}" class="card-img" alt="">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{ item.text }}</p>
+                        </div>
+                        {% endif %}
                     </div>
-                    {% for employee in object_list %}
-                    {% if employee.department == department %}
-                    абоба
-                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
