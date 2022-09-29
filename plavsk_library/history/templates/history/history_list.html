@@ -6,26 +6,21 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-12">
-        <div class="row row-cols-md-3">
-            {% for item in object_list %}
-            <div class="col">
-                <div class="card border-dark mb-3 h-100" style="width: 28rem;">
-                    {% if item.image %}
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="">
-                    {% endif %}
-                    <div class="card-body text-dark">
-                    {% if item.caption %}
-                        <h5 class="card-title">{{ item.caption }}</h5>
-                    {% endif %}
-                    {% if item.text %}
-                        <p class="card-title">{{ item.text }}</p>
-                    {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+    {% for item in object_list %}
+    <div class="history-block col-md-5">
+        {% if item.image %}
+        <img src="{{ item.image.url }}" alt="">
+        {% endif %}
+        <div class="card-body text-dark">
+            {% if item.caption %}
+            <p>{{ item.caption }}</p>
+            {% endif %}
+            {% if item.text %}
+            <p>{{ item.text }}</p>
+            {% endif %}
         </div>
     </div>
+    {% endfor %}
 </div>
+
 {% endblock %}
