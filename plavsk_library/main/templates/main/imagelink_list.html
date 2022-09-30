@@ -7,12 +7,12 @@
 {% block content %}
 <div class="row">
     {{ content|safe }}
-    <img src="media/main.jpg" class="card-img-top" alt="">
+    <img src="static/img/main.jpg" class="card-img-top" alt="{{ main_name }}">
     <div class="col-md-9">
         {% for item in object_list %}
         <div class="col">
             <a href="{{ item.url }}">
-                <img src="{{ item.image.url }}" class="card-img-top" alt="">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
             </a>
         </div>
         {% endfor %}

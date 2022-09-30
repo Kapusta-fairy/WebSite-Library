@@ -9,7 +9,7 @@
     {% for item in object_list %}
     <div class="history-block col-md-5">
         {% if item.image %}
-        <img src="{{ item.image.url }}" alt="">
+        <img src="{{ item.image.url }}" alt="{{ item.name }}">
         {% endif %}
         <div class="card-body text-dark">
             {% if item.caption %}
