@@ -9,6 +9,6 @@ class Dates(models.Model):
         return self.date
 
     class Meta:
-        verbose_name = 'Даты'
-        verbose_name_plural = 'дата'
+        verbose_name = 'дата'
+        verbose_name_plural = 'даты'
         ordering = ['date']

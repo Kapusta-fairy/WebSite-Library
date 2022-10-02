@@ -9,6 +9,6 @@ class Documents(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Документы'
-        verbose_name_plural = 'документ'
+        verbose_name = 'документ'
+        verbose_name_plural = 'документы'
         ordering = ['name']

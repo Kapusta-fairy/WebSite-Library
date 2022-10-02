@@ -7,6 +7,10 @@ class History(models.Model):
     caption = models.CharField(max_length=150, blank=True, null=True, verbose_name='Подпись')
     text = models.TextField(blank=True, null=True, verbose_name='Текст')
 
+    def __str__(self):
+        return self.name
+
     class Meta:
-        verbose_name = 'Историческая информация'
+        verbose_name = 'историческая информация'
         verbose_name_plural = 'блок информации'
+

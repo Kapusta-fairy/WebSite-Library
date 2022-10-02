@@ -10,5 +10,5 @@ class ImageLink(models.Model):
         return str(f'Картинка №{self.pk}')
 
     class Meta:
-        verbose_name = 'Документы'
+        verbose_name = 'документ'
         verbose_name_plural = 'документ'

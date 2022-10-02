@@ -7,3 +7,11 @@ class News(models.Model):
     image = models.ImageField(upload_to='news/image/', blank=True, verbose_name='Изображение')
     video = models.FileField(upload_to='news/video/', blank=True, verbose_name='Видео')
     utube = models.URLField(blank=True, verbose_name='Ссылка на видео на YouTube')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'новости'
+        ordering = ['title']

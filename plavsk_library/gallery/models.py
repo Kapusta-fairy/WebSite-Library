@@ -5,6 +5,9 @@ class Gallery(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название(для слабовидящих)')
     image = models.ImageField(upload_to='gallery/', verbose_name='Изображение галереи')
 
+    def __str__(self):
+        return self.name
+
     class Meta:
-        verbose_name = 'Галерея'
-        verbose_name_plural = 'изображения'
+        verbose_name = 'изображение в галереи'
+        verbose_name_plural = 'галерея'
