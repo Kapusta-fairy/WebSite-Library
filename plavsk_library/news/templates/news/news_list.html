@@ -3,7 +3,7 @@
 {% load news_tags %}
 
 {% block title %}
-Главная страница
+{{ title }}
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
                         {% endif %}
                         {% if item.video %}
                         <video controls="controls">
-                            <source src="{{ item.video }}">
+                            <source src="{{ item.video.url }}">
                         </video>
                         {% endif %}
                         {% if item.image %}
