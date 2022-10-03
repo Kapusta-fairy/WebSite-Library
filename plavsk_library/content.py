@@ -33,3 +33,6 @@ actual_address = '301470, Тульская область, г.Плавск, ул
 services_title = 'Услуги'
 history_title = 'История'
 news_title = 'Новость'
+documents_title = 'Документы'
+gallery_title = 'Галерея'
+dates_title = 'Календарь знаменательных дат'

@@ -16,10 +16,10 @@ class Dates(models.Model):
 
 
 class Years(models.Model):
-    year = models.IntegerField(max_length=4, verbose_name='Год')
+    year = models.IntegerField(verbose_name='Год')
 
     def __str__(self):
-        return self.year
+        return str(self.year)
 
     class Meta:
         verbose_name = 'год'

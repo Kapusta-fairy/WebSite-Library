@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Календарь знаменательных дат
+{{ title }}
 {% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-12">
+        <h3>{{ title }}</h3>
+        <h6>Знаменательные даты Плавского района на 2022 год</h6>
+        <em>(Библиографический список литературы)</em>
+        {% for year in years %}
+        <h5>{{ year }}</h5>
         <div class="card-group">
             {% for item in object_list %}
-            <div class="card border-dark mb-3 h-100" style="width: 28rem;">
+            {% if item.year == year %}
+            <div class="card">
                 <div class="card-body text-dark">
                     <h5 class="card-title">{{ item.date }}</h5>
                 </div>
@@ -17,8 +23,10 @@
                     <p class="card-text">{{ item.content }}</p>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
