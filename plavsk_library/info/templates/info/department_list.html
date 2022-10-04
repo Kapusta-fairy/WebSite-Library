@@ -5,40 +5,43 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-5">
-        <p><h5>Полное наименование учреждения:</h5> {{ full_name }}
-        <p><h5>Сокращенное наименование учреждения:</h5> {{ short_name }}
-        <p><h5>Дата создания организации:</h5> {{ date_creation }} год
-        <p><h5>Руководитель:</h5> {{ leader }}
-        <p><h5>Тип учреждения (организации):</h5> {{ organization_type }}
-        <p><h5>Учредитель:</h5> {{ founder|safe }}
-        <p><h5>Юридический адрес:</h5> {{ legal_address }}
-        <p><h5>Фактический, почтовый адрес:</h5> {{ actual_address }}
-    </div>
-    <div class="col-md-7">
-        <p><h4>Отделения:</h4>
-        {% for department in object_list %}
-        <div class="accordion accordion-flush" id="accordionFlush">
-            <div class="accordion-item">
-                <h4 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse{{ department.id }}" aria-expanded="false"
-                            aria-controls="flush-collapse{{ department.id }}">
-                        {{ department.title }}
-                    </button>
-                </h4>
-                <div id="flush-collapse{{ department.id }}" class="accordion-collapse collapse"
-                     aria-labelledby="flush-headingOne"
-                     data-bs-parent="#accordionFlush">
-                    <div class="department_content accordion-body">
-                        <p>Телефон: {{ department.phone }}</p>
-                        <p>Расписание:<br>{{ department.schedule|safe }}</p>
+<div class="col">
+    <h2>{{ title }}</h2>
+    <div class="row">
+        <div class="col-md-5">
+            <p><h5>Полное наименование учреждения:</h5> {{ full_name }}
+            <p><h5>Сокращенное наименование учреждения:</h5> {{ short_name }}
+            <p><h5>Дата создания организации:</h5> {{ date_creation }} год
+            <p><h5>Руководитель:</h5> {{ leader }}
+            <p><h5>Тип учреждения (организации):</h5> {{ organization_type }}
+            <p><h5>Учредитель:</h5> {{ founder|safe }}
+            <p><h5>Юридический адрес:</h5> {{ legal_address }}
+            <p><h5>Фактический, почтовый адрес:</h5> {{ actual_address }}
+        </div>
+        <div class="col-md-7">
+            <p><h4>Отделения:</h4>
+            {% for department in object_list %}
+            <div class="accordion accordion-flush" id="accordionFlush">
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse{{ department.id }}" aria-expanded="false"
+                                aria-controls="flush-collapse{{ department.id }}">
+                            {{ department.title }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse{{ department.id }}" class="accordion-collapse collapse"
+                         aria-labelledby="flush-headingOne"
+                         data-bs-parent="#accordionFlush">
+                        <div class="department_content accordion-body">
+                            <p>Телефон: {{ department.phone }}</p>
+                            <p>Расписание:<br>{{ department.schedule|safe }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 {% endblock %}

@@ -11,21 +11,19 @@
         <h6>Знаменательные даты Плавского района на 2022 год</h6>
         <em>(Библиографический список литературы)</em>
         {% for year in years %}
-        <h5>{{ year }}</h5>
-        <div class="card-group">
-            {% for item in object_list %}
-            {% if item.year == year %}
-            <div class="card">
-                <div class="card-body text-dark">
-                    <h5 class="card-title">{{ item.date }}</h5>
-                </div>
-                <div class="card-footer">
-                    <p class="card-text">{{ item.content }}</p>
-                </div>
+        <h5 class="dates">Знаменательные даты Плавского района на {{ year }} год</h5>
+        {% for item in object_list %}
+        {% if item.year == year %}
+        <div class="card">
+            <div class="card-body text-dark">
+                <h5 class="card-title">{{ item.date }}</h5>
             </div>
-            {% endif %}
-            {% endfor %}
+            <div class="card-footer">
+                <p class="card-text">{{ item.content }}</p>
+            </div>
         </div>
+        {% endif %}
+        {% endfor %}
         {% endfor %}
     </div>
 </div>

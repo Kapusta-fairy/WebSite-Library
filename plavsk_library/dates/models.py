@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Dates(models.Model):
-    date = models.CharField(max_length=60, verbose_name='Дата события')
+    date = models.CharField(max_length=150, verbose_name='Дата события')
     content = models.TextField(verbose_name='Информация о событии')
     year = models.ForeignKey('years', on_delete=models.PROTECT, verbose_name='Год')
 
@@ -24,4 +24,4 @@ class Years(models.Model):
     class Meta:
         verbose_name = 'год'
         verbose_name_plural = 'годы'
-        ordering = ['year']
+        ordering = ['-year']

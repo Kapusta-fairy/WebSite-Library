@@ -28,3 +28,10 @@ body {
 .visually_impaired {
     cursor:pointer;
 }
+.dates {
+    padding-top: 3%;
+}
+.document {
+    color: #212529;
+    text-decoration: none;
+}

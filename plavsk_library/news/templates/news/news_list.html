@@ -8,39 +8,36 @@
 
 {% block content %}
 <div class="row">
+    <h2>{{ title }}</h2>
     <div class="col-md-12">
-        <div class="row row-cols-md-3">
-            {% for item in object_list %}
-            <div class="col">
-                <div class="card border-dark mb-3 h-100" style="width: 28rem;">
-                    <div class="card-footer">
-                        {% if item.title %}
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        {% endif %}
-                        {% if item.text %}
-                        <p class="card-text">{{ item.text }}</p>
-                        {% endif %}
-                        {% if item.video %}
-                        <video controls="controls">
-                            <source src="{{ item.video.url }}">
-                        </video>
-                        {% endif %}
-                        {% if item.image %}
-                        <img src="{{ item.image.url }}" class="card-img-top" alt="" height="225">
-                        {% endif %}
-                        {% if item.utub %}
-                        <iframe width="560" height="315"
-                                src="{% get_video_id item %}" title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                        </iframe>
-                        {% endif %}
-                    </div>
-                </div>
+        {% for item in object_list %}
+        <div class="card">
+            <div class="card-footer">
+                {% if item.title %}
+                <h5 class="card-title">{{ item.title }}</h5>
+                {% endif %}
+                {% if item.text %}
+                <p class="card-text">{{ item.text }}</p>
+                {% endif %}
+                {% if item.video %}
+                <video controls="controls">
+                    <source src="{{ item.video.url }}">
+                </video>
+                {% endif %}
+                {% if item.image %}
+                <img src="{{ item.image.url }}" class="card-img-top" alt="">
+                {% endif %}
+                {% if item.utub %}
+                <iframe width="560" height="315"
+                        src="{% get_video_id item %}" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+                {% endif %}
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
