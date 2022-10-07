@@ -9,33 +9,55 @@
 {% block content %}
 <div class="row">
     <h2>{{ title }}</h2>
-    <div class="col-md-12">
+    <div>
         {% for item in object_list %}
         <div class="card">
-            <div class="card-footer">
-                {% if item.title %}
-                <h5 class="card-title">{{ item.title }}</h5>
-                {% endif %}
-                {% if item.text %}
-                <p class="card-text">{{ item.text }}</p>
-                {% endif %}
-                {% if item.video %}
-                <video controls="controls">
-                    <source src="{{ item.video.url }}">
-                </video>
-                {% endif %}
-                {% if item.image %}
-                <img src="{{ item.image.url }}" class="card-img-top" alt="">
-                {% endif %}
-                {% if item.utub %}
-                <iframe width="560" height="315"
-                        src="{% get_video_id item %}" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-                {% endif %}
-            </div>
+            <h5 class="card-title">{{ item.title }}</h5>
+            {% if item.text %}
+            <p class="card-text">{{ item.text }}</p>
+            {% endif %}
+            {% if item.video %}
+            <video controls="controls" class="news">
+                <source src="{{ item.video.url }}">
+            </video>
+            {% endif %}
+            {% if item.utub %}
+            <iframe src="{% get_video_id item %}" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            {% endif %}
+            {% if item.image1 %}
+            <img src="{{ item.image1.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image2 %}
+            <img src="{{ item.image2.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image3 %}
+            <img src="{{ item.image3.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image4 %}
+            <img src="{{ item.image4.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image5 %}
+            <img src="{{ item.image5.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image6 %}
+            <img src="{{ item.image6.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image7 %}
+            <img src="{{ item.image7.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image8 %}
+            <img src="{{ item.image8.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image9 %}
+            <img src="{{ item.image9.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
+            {% if item.image10 %}
+            <img src="{{ item.image10.url }}" class="news" alt="{{ item.title }}"/>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

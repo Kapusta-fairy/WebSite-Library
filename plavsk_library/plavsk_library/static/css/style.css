@@ -35,3 +35,20 @@ body {
     color: #212529;
     text-decoration: none;
 }
+.social {
+    padding: 10%;
+}
+.news {
+    width: auto;
+}
+.scale {
+    display: inline-block;
+    overflow: hidden;
+}
+.scale img {
+    transition: 0.5s;
+    display: block;
+}
+.scale img:hover {
+    transform: scale(1.5);
+}
