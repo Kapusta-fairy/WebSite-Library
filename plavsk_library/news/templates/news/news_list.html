@@ -13,6 +13,7 @@
         {% for item in object_list %}
         <div class="card">
             <h5 class="card-title">{{ item.title }}</h5>
+            <p>{{ item.created_at }}</p>
             {% if item.text %}
             <p class="card-text">{{ item.text }}</p>
             {% endif %}
@@ -28,36 +29,58 @@
                     allowfullscreen>
             </iframe>
             {% endif %}
-            {% if item.image1 %}
-            <img src="{{ item.image1.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image2 %}
-            <img src="{{ item.image2.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image3 %}
-            <img src="{{ item.image3.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image4 %}
-            <img src="{{ item.image4.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image5 %}
-            <img src="{{ item.image5.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image6 %}
-            <img src="{{ item.image6.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image7 %}
-            <img src="{{ item.image7.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image8 %}
-            <img src="{{ item.image8.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image9 %}
-            <img src="{{ item.image9.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
-            {% if item.image10 %}
-            <img src="{{ item.image10.url }}" class="news" alt="{{ item.title }}"/>
-            {% endif %}
+            <div class="row">
+                {% if item.image1 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image1.url }}" class="scale news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image2 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image2.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image3 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image3.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image4 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image4.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image5 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image5.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image6 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image6.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image7 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image7.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image8 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image8.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image9 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image9.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image10 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image10.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+            </div>
         </div>
         {% endfor %}
     </div>
