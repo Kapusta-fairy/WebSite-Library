@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css_addition %}
+<link rel='stylesheet' href="{% static 'main/css/style.css' %}">
+{% endblock %}
 
 {% block title %}
 {{ title }}
@@ -7,7 +12,7 @@
 {% block content %}
 <div class="row">
     {{ content|safe }}
-    <img src="static/img/main.jpg" class="card-img-top" alt="{{ main_name }}">
+    <img src="{% static 'main/img/home_subscription.jpg' %}" class="home_subscription_img" alt="{{ main_name }}">
     <div class="col-md-9">
         {% for item in object_list %}
         <div class="col">

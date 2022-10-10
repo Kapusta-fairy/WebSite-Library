@@ -6,20 +6,6 @@ html, body {
 	width: 100%;
 	color: #444;
 }
-.lib_title {
-    text-align: center;
-}
-.bottom_bar {
-    text-align: center;
-    color: #666;
-    font-size: 16px;
-}
-.department_content {
-    margin: 3%;
-}
-.content {
-    background: #fff;
-}
 body {
     background: url("../img/back.png");
 }
@@ -29,71 +15,18 @@ body {
 .navbar .navbar-nav .nav-link {
     color: #212529;
 }
-.history-block {
-    margin: 1%;
+.content {
+    background: #fff;
+    padding: 3% 2% 2% 2%;
+}
+.bottom_bar {
     text-align: center;
+    color: #666;
+    font-size: 16px;
+}
+.social_icon {
+    padding: 10%;
 }
 .visually_impaired {
     cursor:pointer;
-}
-.dates {
-    padding-top: 3%;
-}
-.document {
-    color: #212529;
-    text-decoration: none;
-}
-.social {
-    padding: 10%;
-}
-.news {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-.news-container {
-    display: flex;
-    align-items: center
-}
-.scale {
-    overflow: hidden;
-}
-.scale img {
-    transition: 0.5s;
-    display: block;
-}
-.scale img:hover {
-    transform: scale(1.25);
-}
-.list-pages {
-    text-align: center;
-    margin: 0 0 20px 0;
-}
-.list-pages ul {
-    margin: 20px 0 0 0;
-    padding: 0;
-    list-style: none;
-}
-.list-pages ul li {
-    display: inline-block;
-    margin: 0 20px 0 0;
-}
-.list-pages a {
-    color: #000;
-    font-size: 24px;
-    text-decoration: none;
-}
-.list-pages .page-num, .page-num-selected {
-    display: inline-block;
-    width: 60px;
-    border: 1px solid #d0d0d0;
-    border-radius: 30px;
-}
-.list-pages .page-num-selected {
-    border: none;
-    color: #000;
-    font-size: 20px;
-}
-.list-pages .page-num-selected:hover {
-    box-shadow: none;
 }

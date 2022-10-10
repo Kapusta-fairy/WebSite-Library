@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
-
 {% load news_tags %}
+{% load static %}
+
+{% block css_addition %}
+<link rel='stylesheet' href="{% static 'news/css/style.css' %}">
+{% endblock %}
 
 {% block title %}
 {{ title }}

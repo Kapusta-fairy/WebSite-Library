@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css_addition %}
+<link rel='stylesheet' href="{% static 'gallery/css/style.css' %}">
+{% endblock %}
 
 {% block title %}
-Календарь знаменательных дат
+{{ title }}
 {% endblock %}
 
 {% block content %}
 <div class="row">
     <h2>{{ title }}</h2>
-    <div class="col-md-12">
-        <div class="row row-cols-md-3">
-            <div class="card-group">
-                {% for item in object_list %}
-                <div class="card h-100" style="width: 28rem;">
-                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+    {% for item in object_list %}
+    <div class="gallery scale col-md-4">
+        <img src="{{ item.image.url }}" class="scale gallery_image" alt="{{ item.name }}"/>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}

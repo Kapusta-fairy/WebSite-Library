@@ -4,7 +4,7 @@ from news.models import News
 
 
 class LatestNews(ListView):
-    paginate_by = 2
+    paginate_by = 10
     model = News
 
     def get_context_data(self, *, object_list=None, **kwargs):
