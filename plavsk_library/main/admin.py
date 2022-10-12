@@ -16,3 +16,4 @@ class MainAdmin(admin.ModelAdmin):
 admin.site.register(ImageLink, MainAdmin)
 admin.site.site_header = 'Муниципальное бюджетное учреждение муниципального образования плавский район ' \
                          '"централизованная библиотечная система"'
+admin.site.site_title = 'Администрирование сайта библиотеки'

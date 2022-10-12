@@ -8,6 +8,6 @@ class Services(models.Model):
         return self.text
 
     class Meta:
-        verbose_name = 'услуга'
-        verbose_name_plural = 'услуги'
+        verbose_name = 'бесплатная услуга'
+        verbose_name_plural = 'бесплатные услуги'
         ordering = ['text']
