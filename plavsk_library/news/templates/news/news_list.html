@@ -84,6 +84,16 @@
                     <img src="{{ item.image10.url }}" class="news" alt="{{ item.title }}"/>
                 </div>
                 {% endif %}
+                {% if item.image11 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image11.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
+                {% if item.image12 %}
+                <div class="news-container scale col-md-4">
+                    <img src="{{ item.image12.url }}" class="news" alt="{{ item.title }}"/>
+                </div>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

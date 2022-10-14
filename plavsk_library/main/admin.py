@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-
 from main.models import ImageLink
 
 
@@ -11,6 +10,8 @@ class MainAdmin(admin.ModelAdmin):
 
     def preview(self, obj):
         return mark_safe(f'<img src="{obj.image.url}" style="max-height: 200px;">')
+
+    preview.short_description = 'Миниатюра'
 
 
 admin.site.register(ImageLink, MainAdmin)

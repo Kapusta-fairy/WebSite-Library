@@ -16,6 +16,8 @@ class News(models.Model):
     image8 = models.ImageField(upload_to='news/image/%y/%m/%d', blank=True, null=True, verbose_name='Изображение 8')
     image9 = models.ImageField(upload_to='news/image/%y/%m/%d', blank=True, null=True, verbose_name='Изображение 9')
     image10 = models.ImageField(upload_to='news/image/%y/%m/%d', blank=True, null=True, verbose_name='Изображение 10')
+    image11 = models.ImageField(upload_to='news/image/%y/%m/%d', blank=True, null=True, verbose_name='Изображение 11')
+    image12 = models.ImageField(upload_to='news/image/%y/%m/%d', blank=True, null=True, verbose_name='Изображение 12')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     def __str__(self):
